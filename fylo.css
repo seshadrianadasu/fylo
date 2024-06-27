@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    Font-size: 14px;
+    font-weight: 400,700;
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Raleway","sans-serif"; 
+}
+.bg-img{
+    overflow: auto;
+    display: flex;
+    justify-content:flex-end;
+    position: absolute;
+    bottom: 0;
+    height: 55%;
+    width: 100%;
+}
+.mobile-bg-img{
+    display: none;
+}
+.container{
+    position: relative;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 960px;
+    margin: 0 auto;    
+}
+.fylo-files, .storage{
+    background: var(--Dark-Blue);
+}
+.container .fylo-files{ 
+    border-radius: 0.5rem 5rem 0.5rem 0.5rem;  
+}
+.container .fylo{
+    padding: 2rem 4.5rem 1.25rem 1.90rem;
+    height: 11rem;
+    width: 20rem;
+   margin-right: 2rem;
+}
+.file-manager img{
+    background: var(--Very-Dark-Blue);
+    padding: 0.98rem;
+    border-radius: 0.6rem;
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-top: 1.25rem;
+    margin-right: 1rem;
+}
+.storage{
+   padding: 2rem;
+   display: flex;
+   flex-direction: column;
+   width: 58%;
+   border-radius: 0.5rem;
+   position: relative; 
+}
+p{
+    color:var(--Grayish-Blue);
+    font-weight:400;
+}
+.storage div p span{
+    color: var(--Pale-Blue);
+    font-weight: 700;
+    font-weight: bold;
+}
+.progress-bar{
+    width:100%;
+    height: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    background-color: hsl(229, 57%, 11%, 0.5);
+}
+.gradient{
+    height: 0.8rem;
+    width: 65%;
+    position: absolute;
+    background:linear-gradient(90deg,#ffa399,#ff4d97);
+    border-radius:0.5rem ;
+    top: 4.12rem; 
+}
+.circle{
+    border-radius: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+   background: white;
+   position: absolute;
+   top: 46%;
+   left: 69%;
+}
+.capacity p{
+    color: var(--Pale-Blue);
+    font-weight: 500;
+}
+.capacity{
+    display: flex;
+    justify-content: space-between;
+}
+.message-box{
+    height: 3.5rem;
+    width: 10rem;
+    position: absolute;
+    top:-1rem;
+    right:6rem;
+    border-radius: 0.5rem ;
+    background-color: var(--Pale-Blue);
+}
+.message-box div h2{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.message-box div p{
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+}
+.message-box div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.2rem; 
+}
+.triangle{
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    border-left: 28px solid transparent;
+    border-top: 28px solid var(--Pale-Blue);
+}
+@media (max-width:768px){
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        gap: 1.25rem;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .bg-img{
+        display: none;
+    }
+    .mobile-bg-img{
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .container .fylo{
+        width: 100%;
+        margin-left: 1.25rem;
+    }
+    .container .fylo{
+        padding: 2rem 4rem 1.25rem 1.90rem;
+    }
+    .storage{
+        width: 88%;
+        margin-bottom: 1rem;
+    }
+    .storage div p{
+        text-align: center;
+    }
+    .message-box{
+        height: 3.5rem;
+        width: 10rem;
+        background-color:var(--Pale-Blue);
+        position: relative;
+        bottom: 0;
+        left: -0.1rem;
+        top: -3.25rem;
+    }
+    .message-box .triangle{
+        display: none;
+    }
+    .circle{
+        left: 71%;
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+}
